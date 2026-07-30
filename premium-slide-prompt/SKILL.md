@@ -1,114 +1,285 @@
 ---
 name: premium-slide-prompt
-description: Transform a plain PPT outline (usually Chinese) into a single, ready-to-use English image-generation prompt that describes ONE premium, Apple/McKinsey/Sequoia-keynote-style presentation slide. Trigger whenever the user hands over slide content, a bullet outline, or a page of a pitch deck and wants it turned into an AI-image slide, a "文生图" prompt, a keynote-quality visual, or a premium/投资人 pitch slide. Also trigger on phrases like "把这页PPT做成图"、"生成幻灯片提示词"、"帮我做成一页高端PPT"、"pitch deck 配图"、"McKinsey/苹果风格的PPT", or any request to design a single slide visually rather than write its text. Use this even when the user only pastes raw slide text without saying the word "prompt" — if they want a slide-as-image, this is the skill.
+description: Transform a Chinese or English slide outline into one ready-to-use English image-generation prompt for a premium 16:9 investor-pitch slide, refining and restructuring on-slide copy when that improves investor clarity. Use for investor covers, AI-image slides, 文生图提示词, keynote-quality BP pages, pitch-deck visuals, or slide beautification. Prioritize capital-label cover layouts and evidence-first structures such as numbers, equations, comparisons, capability evolution, capital timelines, matrices, and diagrams; select metaphorical, figurative, and 3D objects according to the page task and chosen style reference.
 ---
 
 # Premium Slide Prompt Designer
 
-Turn a plain slide outline into ONE English image-generation prompt for a single, premium presentation slide. You are not rewriting the content — you are art-directing it. The Chinese text stays exactly as given; you design everything around it.
+Turn a slide outline into one English image-generation prompt for a complete premium 16:9 presentation slide. Art-direct both the visual system and the on-slide copy. Condense, rewrite, recombine, or synthesize copy when it improves hierarchy, clarity, and investment impact.
 
-## What you produce
+## Output
 
-A single English prompt, ready to paste into an AI image generator (Midjourney, DALL·E, 即梦, 通义万相, etc.). The prompt describes **one complete 16:9 slide**. Nothing else — no commentary, no options, no restated outline unless the user asks.
+Produce only the image-generation prompt unless the user asks for reasoning, alternatives, or review. For multiple slides, produce one self-contained prompt per slide and maintain one visual system across the deck.
 
-## Before you write anything: reason silently
+## Decide the communication mode first
 
-Answer these four questions in your head first. Don't print them.
+Reason silently before designing:
 
-1. What is the single most important message of this slide?
-2. What will the investor still remember one hour later?
-3. What visual metaphor communicates that message fastest?
-4. What one element deserves the strongest visual emphasis?
+1. What single conclusion must the investor retain?
+2. What investment belief does this slide strengthen or objection does it remove?
+3. What evidence carries that conclusion?
+4. Which visual structure communicates that evidence fastest?
+5. What one element should receive the strongest emphasis?
 
-Only after this do you design the layout. **Every design choice must reinforce the core message, not decorate the page.** If a decision doesn't serve the one message, cut it.
+Choose one primary page mode:
 
-## The mindset: this is a pitch, not an internal deck
+1. **Investor-cover** — one investment-defining headline, a small set of capital labels, and a restrained right-side hero object.
+2. **Evidence-portfolio** — 3–4 aligned evidence containers that summarize distinct investment reasons using different internal evidence grammars.
+3. **Conclusion-number** — one decisive number, ratio, equation, waterfall, or quantified chain.
+4. **Rigorous-comparison** — parameter table, competitor matrix, before/after, or benchmark columns.
+5. **Capability-progression** — technical lineage, productization, inherited assets, and stepwise capability expansion.
+6. **Capital-progression** — timeline, valuation staircase, milestones, financing, M&A, or category evolution.
+7. **Capability-structure** — team matrix, system modules, product stack, or complementary capabilities.
+8. **Causal-mechanism** — process, value chain, multi-loop flywheel, funnel, or architecture that explains why the result occurs.
+9. **Visual-metaphor** — a physical metaphor or coordinated symbolic scene selected to embody an abstract mechanism, category, or terminal vision.
 
-The goal is not information density. It is investor attention, understanding, memorability, and conviction. One slide = one core idea, delivered as fast as possible. When in doubt, sacrifice a secondary detail to sharpen the one thing that matters.
+Follow a page mode supplied by an upstream outline unless the content clearly contradicts it.
 
-Apply these storytelling moves whenever the content allows:
+When input comes from `bp-narrative-outline`, map its page modes as follows:
 
-- **Challenge an assumption.** Open from an industry misconception or outdated metric rather than attacking competitors. Creates cognitive tension. (e.g. "Most people focus on humanoid robots. The real question is whether a humanoid is necessary.")
-- **Think in metaphors.** Convert abstract business concepts into physical objects the eye grasps instantly — oil field, road, bridge, engine, flywheel, moat, power grid, snowball, nuclear reactor, lighthouse, rocket, flowing golden river. The metaphor should *explain the business model*, not just ornament it. A strong metaphor becomes the memory anchor.
-- **Write a memorable headline.** Elevate the key conclusion into a short, repeatable line. "Data is an asset, not an expense." "We accumulate reserves, not revenue." "The factory is the product." Avoid generic corporate filler.
-- **Redefine the metric.** Where it fits, offer a new lens: measure accumulated proprietary data, not annual revenue; productive operating hours, not robot shipments; infrastructure coverage, not licenses.
-- **One memory anchor per slide.** Exactly one element must be instantly unforgettable — a giant metaphor object, an oversized number, a provocative statement, a bold comparison. If the investor remembers one thing, it's this.
+- `资本封面` → Investor-cover
+- `投资亮点总览` → Evidence-portfolio
+- `结论数字` → Conclusion-number
+- `严谨比较` → Rigorous-comparison
+- `能力沿革` → Capability-progression
+- `资本演进` → Capital-progression
+- `能力结构` → Capability-structure
+- `因果机制` → Causal-mechanism
+- `视觉隐喻` → Visual-metaphor
 
-## The five optimizations you always attempt
+Treat `投资任务`, `核心结论`, `数字身份`, `记忆锚点`, `页面模式`, `投资人追问`, `右侧拟物`, and `待补数据` as design metadata rather than automatic on-slide text. Select, refine, and synthesize the on-slide copy from the title, capital labels, module contents, `公司名/Logo`, footnotes, and other supplied material. Keep data-status distinctions visible whenever they affect how an investor should interpret a claim.
 
-1. **Add a visual metaphor.** Turn the abstract into a concrete large object (growth → giant gradient arrow; AI infra → massive GPU chip; market → glowing globe; cashflow → flowing golden river; execution → rocket launch; knowledge → mountain). The large object is the visual focus.
-2. **Build one clear hierarchy.** Identify the single most important sentence / keyword / number. **Only one focal point.** Amplify it with oversized type, glow, a highlight box, spotlight, callout, or floating label. The emphasized area occupies ~10–20% of the slide. Don't stack effects.
-3. **Show the logic visually.** Connect blocks with gradient arrows, flow lines, timeline, funnel, cycle, bridge, or hierarchy — so the eye is guided, not left to hunt.
-4. **Increase impact.** Where suitable: a large background object, 3D / isometric object, giant icon, semi-transparent industrial scene, dramatic lighting, soft shadow, depth, glassmorphism, gradient overlay, floating layers.
-5. **Preserve readability.** Chinese text must look editable and clean — no decorative fonts, generous spacing. Business first.
+## Evidence before spectacle
 
-## Global style constraints
+Design the page around proof and fast recognition. Decorative or figurative objects may support hierarchy, category identification, atmosphere, and commercial storytelling when the selected style calls for them. High information density is allowed when the information is structured. Reject unstructured density, not density itself.
 
-**Canvas.** 16:9 landscape, full-bleed, high resolution, investor-pitch / executive quality.
+Preserve one conclusion and one memory anchor, but allow several supporting evidence modules. A memory anchor may be:
 
-**Background.** Light themes by default (not dark). Match the color to the topic:
-- Technology → light blue / azure / blue-gray
-- Industrial → warm gray / metallic / light red-gray
-- Consumer → champagne / warm ivory / light yellow
-- Healthcare → light cyan
-- Sustainability / Energy → light green
-- Finance → light blue-gray
-- AI → white with subtle blue gradients
+- an oversized number;
+- a sharp comparison;
+- a complete equation;
+- a highlighted column or row;
+- a rising timeline;
+- a concise verdict;
+- a content-specific product visual;
+- a page-appropriate metaphor or category illustration.
 
-The background need not fill the canvas. Combine partial color blocks with subtle low-contrast graphics — flowing lines, geometric patterns, engineering grids, dotted matrices, wireframes, soft waves, material textures. These occupy ~15–40% of the page and must support, never compete with, the content.
+One focal point does not mean one giant object.
 
-**Consistency.** Across slides in one deck, keep a consistent visual language, palette, illustration style, and graphic vocabulary — while letting each slide shift its accent color to its own topic.
+On an Evidence-portfolio page, keep exactly one slide-level memory anchor. Evidence containers may contain supporting numbers, assertions, charts, or credentials, but must not establish separate local memory anchors or competing visual centers.
 
-**Overall feel.** Elegant, modern, premium, minimal, corporate — Apple keynote / McKinsey report / Microsoft Build / OpenAI presentation. Abundant whitespace. No clutter, no over-decoration.
+## Build the hierarchy
+
+Use this reading order unless the content needs another:
+
+`conclusion headline → memory anchor → supporting evidence → bottom-line verdict → source/footnote`
+
+Establish hierarchy with scale, weight, alignment, spacing, and rules, then select accent colors, glow, shadows, glass effects, and illustration according to the page mode and chosen style. Connect modules only when a real logical relationship exists. Prefer clean rules, brackets, multiplication signs, arrows, or progression lines over decorative flow graphics.
+
+For dense evidence pages:
+
+- use a clear grid; introduce selective asymmetry when it improves emphasis or reading order;
+- group evidence into 2–4 scanable zones;
+- highlight only decisive differences;
+- keep labels short and aligned;
+- reserve a conclusion band or verdict line;
+- preserve readable source notes and units.
+
+## Page-mode guidance
+
+### Investor-cover
+
+Use a split composition as the default starting point, then adjust it selectively:
+
+- typically reserve the left or center-left area for the investment-defining headline and capital labels;
+- typically place one product, device, or metaphorical object on the right;
+- scale and position the object according to its communication role and the chosen style;
+- allow midpoint crossing or full-bleed treatment on a visual-led cover when the headline and labels remain fully readable.
+
+Apart from the large headline and a restrained company name/Logo, allow only capital labels:
+
+1. financing round — mandatory;
+2. specific industry track — only when distinctive;
+3. strong financial metric — revenue, profit, orders, installed base, or scale with period and unit;
+4. team credibility — recognizable company heritage or meaningful industry tenure;
+5. verified customer or capital endorsement.
+
+Use 2–4 short labels in total, including the financing round. Present them as compact one-line badges, a clean label row, or a small aligned stack. Do not force all five categories. Omit weak labels. Never invent a missing financing round, metric, affiliation, customer relationship, or investor endorsement.
+
+The cover should communicate project level, financing stage, and strongest credibility within three seconds.
+
+### Evidence-portfolio
+
+Use a conventional 3–4 column or 2×2 container system when the slide must establish several distinct investment reasons at once. The sophistication comes from selection, hierarchy, and internal variation—not from inventing an exotic layout.
+
+Apply a **same shell, different evidence grammar**:
+
+- keep outer geometry, numbering, title baseline, corner treatment, and gutters consistent;
+- let each container use the evidence form best suited to its claim, such as an oversized market number, a product/technology assertion with proof strips, a compact growth chart, or a team capability equation;
+- do not repeat the same “large number + two lines” template in every container;
+- order the containers as an investment argument, preferably:
+  `market opportunity → technical right to win → commercial proof → team ability to deliver`;
+- when the upstream page mode is `投资亮点总览`, use exactly four containers covering market opportunity, technical right to win, commercial proof, and team ability to deliver; if one category lacks evidence, retain the container and mark the gap explicitly rather than filling it with generic copy;
+- for other Evidence-portfolio uses, select 3–4 containers according to the evidence.
+
+Inside each container, use four possible zones:
+
+1. a small index or category marker;
+2. a short claim title;
+3. one concise evidence expression;
+4. no more than 1–3 proof-bearing details or credential strips.
+
+Not every container needs all four visible zones. Compress aggressively and remove explanatory prose. If a claim cannot be understood with one concise evidence expression and up to three proof points, give it a dedicated slide.
+
+Keep the overall page disciplined:
+
+- reserve the top band for a strong investment conclusion; retain a supplied headline when it is already effective, otherwise synthesize a sharper one from the available evidence;
+- use one exceptional outcome, forecast, or verdict as the slide-level accent only when the outline supports it;
+- build rhythm through controlled asymmetry: one dark or high-contrast evidence card, one product-led card, one chart-led card, and one capability-led card can coexist inside the same grid;
+- use accent colors semantically. For example, retain the deck color for most evidence, use warm gold for verified or clearly labeled financial growth, and reserve red for one exceptional outcome or risk. Do not spread every accent across every card;
+- use icons only as fast evidence labels, not as decoration;
+- when the slide gives an explicit and complete technical explanation, use a specific, targeted figurative visual. In other evidence-portfolio cases, let figurative objects act as simple visual accompaniment: simplify their form, soften or blur secondary detail, and keep the treatment concise. They may support recognition, category association, and atmosphere without carrying the full burden of technical proof.
+
+Traditional containers should feel refined through internal zoning, exact alignment, contrast fields, borders, corner tabs, proof strips, and material treatment. Use floating glass treatment and depth selectively according to hierarchy; containers may share a material language without becoming visually identical or equally loud.
+
+### Conclusion-number
+
+Let the number, equation, or quantified chain dominate. Use restrained separators and short labels. Make the result box or final verdict visually decisive.
+
+### Rigorous-comparison
+
+Use a readable table or aligned competitor columns. Highlight the project column and 1–3 decisive differences; keep the other entries neutral. Add application proof only when it verifies the comparison. Finish with one investor-facing conclusion.
+
+### Capability-progression
+
+Show 3–4 chronological stages in which each stage adds a capability while visibly retaining an earlier asset. Pair every stage with a timeframe, proof-bearing product or technical visual, capability gained, asset inherited, and the next gap unlocked. Use a continuous carrier line, optical beam, data stream, or shared visual spine only when the content proves real continuity; a controlled color transition may distinguish origin from current capability.
+
+Make the progression read as:
+
+`technical foundation → product/equipment realization → capability expansion → platform or standard`
+
+Use institution or company logos only for verified relationships. Do not imply technology transfer, endorsement, or affiliation through proximity or connecting lines. End with one directional verdict that explains what years of accumulation have become.
+
+### Capital-progression
+
+Show dates, milestones, valuation/capital events, and reasons for re-rating as one causal path. Use rising steps or a restrained upward line only when values genuinely increase. Separate historical facts from future targets.
+
+For a growth-path benchmark pair, place the external precedent across roughly 70–75% of the slide, map the project path in a 20–25% side panel, and reserve a bottom verdict band for the investment conclusion. Make the side panel explicitly distinguish current facts from future stages or FA scenarios. Use the precedent to prove the terminal value shape, not to imply that the project already has the benchmark company's scale.
+
+### Capability-structure
+
+Let names, roles, credentials, and complementary coverage carry the page. Use matrices, paired panels, or capability bands. Portraits or product illustrations are optional and subordinate; do not replace substantive credentials with large imagery.
+
+### Causal-mechanism
+
+Use a diagram only to show a real sequence, dependency, feedback loop, or value transfer. Avoid generic single-loop flywheels. Label causes and outcomes, not just nouns.
+
+### Visual-metaphor
+
+Select one primary metaphor or a coordinated set of related symbols according to the page task. Keep text and evidence readable, and scale decorative atmosphere selectively so it supports the conclusion.
+
+## Visual system
+
+**Canvas.** 16:9 landscape, high resolution, investor-pitch and executive-report quality.
+
+**Default character.** Boardroom editorial clarity with premium keynote restraint: crisp geometry, disciplined alignment, strong typography, controlled contrast, and ample but purposeful whitespace.
+
+**Background.** Prefer white, off-white, or an industry-tinted gradient appropriate to the slide. A clean flat light background is allowed. Large-area, low-saturation but visibly layered blue-to-white or gold-to-white multi-stop gradients are allowed and encouraged when they shape container material, hierarchy, or page rhythm. Keep grids, wireframes, waves, dots, textures, and translucent scenery at 0–15% visual prominence; omit them entirely when the evidence already fills the page.
+
+**Palette.** Use a compact set of 2–4 semantic hue families. White, gray, and lighter or darker tints of the same hue do not count as additional hue families. Default to navy or charcoal text, white/light gray surfaces, one industry-relevant accent, and a second warning/highlight color when useful. Avoid overusing unusually intense, uncommon high-saturation combinations, such as magenta plus purple. Controlled saturated accents and clearly separated gradients remain allowed.
 
 **Typography.**
-- Title: very bold, large, top visual priority.
-- Key numbers: extra large, heavy weight, may occupy 20–30% width alone.
-- Descriptions: medium, consistent alignment.
-- Footnotes: smaller, lower contrast.
 
-**Color.** Professional palette, only 2–4 colors. Primary matches the topic and stays soft/premium; accents used sparingly for emphasis; gradients welcome; avoid heavy saturation.
+- Render supplied Chinese or English text cleanly in a modern sans-serif.
+- Make the conclusion headline clear, but allow a decisive number or comparison to outrank it visually.
+- Use large key numbers, medium evidence labels, and smaller low-contrast sources.
+- Keep units, dates, qualifiers, asterisks, brackets, and data-status labels accurate and visible when the copy is refined.
 
-**Icons.** Flat, minimal, modern, one consistent style. Add premium icons only where they help.
+**Graphic treatment.** Prefer rules, boxes, columns, simple icons, flat diagrams, and restrained shadows. Use 3D, isometric renders, glow, glassmorphism, floating layers, dramatic lighting, or industrial scenes when they improve recognition, hierarchy, atmosphere, or explanation. Match their detail level to the page rather than defaulting to engineering precision.
 
-**Layout.** Strict grid alignment, large whitespace, balanced composition, one clear visual center.
+**Traditional-container refinement.** A familiar card, column, band, or table is acceptable and often preferable. Upgrade it by clarifying hierarchy, assigning each region a job, varying the internal evidence form, and controlling contrast—not by piling on effects. “Simple” means fewer decisions exposed to the viewer; it does not mean less reasoning in the layout.
 
-## Output format — read this carefully
+**Product imagery.** For an explicit, complete technical-detail introduction, use a specific figurative visual and make it clearly targeted to the mechanism being explained. In other cases, use figurative objects as simple accompaniment: keep the form concept-level, simplify geometry, soften or blur secondary detail, and use restrained material and lighting treatment. Conventional BP pages default to concept-level figurative visuals; reserve engineering cutaways and dense technical dissection for technical-mechanism pages. Scale object renders selectively according to their role: category-identification visuals remain subordinate, while a visual that carries the explanation or memory anchor may occupy more space.
 
-Produce **ONLY the English image-generation prompt.** It must specify: overall composition, background, visual metaphor, large objects, information hierarchy, typography, highlighted element, icons, shapes, arrows, colors, lighting, depth, business-presentation style, and **exact placement of the Chinese text**.
+## Style reference: Institutional Capital Deck（机构路演风格）
 
-Two hard rules:
-- **Do NOT rewrite or translate the slide content.** Keep every piece of Chinese text exactly as the user provided it, and quote it verbatim inside the English prompt (e.g. `headline reads "数据是资产，不是成本"`).
-- **The prompt itself is in English; the on-slide text stays Chinese.** The image generator needs English direction but must render the original Chinese characters.
+Use this as an optional style overlay when the user names `Institutional Capital Deck`, asks for `机构路演风格`, supplies a matching reference, or wants a polished conventional BP page with visible material richness. It is a visual language, not a separate page mode; retain the evidence structure selected above. When this preset is active, its specific visual rules take precedence over generic visual-system guidance; factual discipline and page-mode logic still apply.
 
-## Worked example
+### Default rules
 
-**User provides this outline:**
-```
-标题：我们不是在卖软件，我们在铺设基础设施
-要点1：每部署一台设备，网络就多一个节点
-要点2：三年覆盖 120 城
-底注：数据来源：内部运营数据 2024
-```
+**Material first, not background first.** Keep the page background clean, light, and quiet. Place the large-area low-saturation multi-stop gradients mainly inside cards, containers, charts, and evidence modules. Use blue-to-white, cyan-to-white, or gold-to-white tonal transitions to shape material, hierarchy, and rhythm rather than turning the entire canvas into a dramatic gradient scene.
 
-**You silently reason:** Core message = the product is infrastructure, not software → metaphor = glowing network/power grid spreading across a map → memory anchor = "120城" as an oversized number + the reframing headline.
+**Commercial figurative visuals first.** Default to concept-level industry illustrations that make a category recognizable in one glance: a globe or global horizon for market scale, a simplified chip for technology, growth columns for commercial progress, professional silhouettes for team credibility, or a softened device outline for product maturity. These objects support recognition, classification, and commercial storytelling. Only an explicit technical-mechanism page should use an engineering cutaway, dense component detail, or precise technical dissection.
 
-**You output only:**
-```
-A premium 16:9 investor-pitch presentation slide, full-bleed, Apple-keynote minimalism. Light blue-to-white gradient background (technology palette) with a low-opacity engineering grid occupying the lower-right ~30%. Central visual metaphor: a large, softly glowing network graph of connected nodes spreading outward across a faint isometric map of China, evoking a power grid being built — cyan glowing edges, subtle depth and soft shadow, floating slightly above the surface (glassmorphism). Bold Chinese headline top-left, very large heavy weight, reads "我们不是在卖软件，我们在铺设基础设施". To the right, one oversized memory-anchor number in extra-heavy azure type reads "120城", occupying ~25% width, with a small floating label beneath it reading "三年覆盖 120 城". A thin gradient arrow/flow line connects the headline down to the growing network, guiding the eye. A second supporting line in medium gray reads "每部署一台设备，网络就多一个节点", left-aligned on the grid. Small low-contrast footnote bottom-left reads "数据来源：内部运营数据 2024". Palette limited to azure, blue-gray, white with a single cyan accent. Dramatic soft lighting from upper-left, generous whitespace, strict grid alignment, one clear visual center on the glowing network. All Chinese characters rendered clean and editable in a modern sans-serif, no decorative fonts. Elegant, premium, corporate.
-```
+**Unified hue family.** Keep the complete slide within a blue–cyan–gold semantic system, supported by white and neutral gray. Use navy or cobalt for the primary business system, cyan for technology or secondary structure, and muted gold for commercial validation or financial progress. Avoid introducing five or six visibly different blue families on the same page.
 
-Notice: the Chinese is untouched and verbatim; only one focal point; one metaphor; the number is the anchor; the arrow carries the logic.
+**Soft light, not spectacle light.** Hide lighting inside glazed edges, material transitions, shallow reflections, curved highlights, and localized emphasis. Avoid volumetric beams, lasers, lens flares, neon outlines, or a separate glow effect around every element.
 
-## Common mistakes to avoid
+**Same shell, different evidence grammar.** Keep container geometry, border treatment, corner language, title baselines, and gutters consistent. Vary the internal evidence expression: one container may use an oversized number, another a concept-level product illustration with proof strips, another a compact growth progression, and another a capability equation or credential bands.
 
-- Translating or paraphrasing the Chinese content — never. Copy it exactly.
-- More than one focal point — the slide loses its punch.
-- Dark backgrounds by default, or 5+ colors, or heavy saturation.
-- Decorating with a metaphor that doesn't explain the business.
-- Outputting explanation, multiple options, or the outline back — output the prompt and nothing else, unless the user explicitly asks for variations or reasoning.
-- Cramming every bullet in at full weight instead of choosing what to emphasize and what to demote.
+**Images identify before they explain.** On ordinary BP pages, an image does not need to carry technical proof. Let it establish the industry, category, or module identity quickly, then let the text, number, chart, or credential carry the evidence.
 
-## When the outline spans several slides
+### Typical composition
 
-If the user pastes a multi-page outline, produce one prompt per slide, each self-contained, and keep the shared visual language consistent across them (same palette family, same graphic vocabulary) while shifting each slide's accent color to its own topic.
+- one synthesized or finalized investment conclusion across the top;
+- 3–4 aligned evidence containers below;
+- exactly one slide-level memory anchor; container-level evidence must remain subordinate and must not become separate memory anchors;
+- a controlled rhythm such as one dark navy market card, one blue-white technology card, one gold-white commercial card, and one pale-blue capability or team card;
+- rounded glazed borders, internal tonal zoning, concise proof strips, and soft grounding shadows.
+
+## Deck-level rhythm
+
+When designing several slides, select a deliberate mix of evidence-led pages, diagrams, product structures, contextual scenes, and visual-metaphor pages. Evidence-led pages should usually form the argumentative backbone; expand or reduce the other categories according to the deck's content and desired rhythm.
+
+Use strong visual pages for covers, section turns, or terminal-vision moments. Let market, competition, technical proof, team, and financing pages sit down and make the case.
+
+## Selective constraints
+
+Select these treatments according to the page task, hierarchy, and chosen style:
+
+- use full-slide industrial renders or oversized devices when they materially support the page's message and leave the evidence readable;
+- use repeated floating glass cards selectively, anchoring them to a clear grid and hierarchy;
+- repeat identical internal card layouts only when comparison benefits from exact repetition; otherwise vary the evidence grammar;
+- use arrows when they communicate sequence, dependency, value transfer, or intentional emphasis;
+- use background engineering graphics at a prominence that does not compete with the evidence;
+- use multiple metaphors or visual anchors only when their relationship and hierarchy are explicit.
+
+On Investor-cover pages, make these choices selectively:
+
+- let the right-side object occupy half or more of the canvas only on a visual-led cover with protected title readability;
+- use a full-slide hero render when the chosen style and content support it, keeping text contrast and hierarchy intact;
+- never add a subtitle, product description, mission statement, or feature list;
+- select 2–4 strong capital labels rather than filling a category quota;
+- retain an accurate financing-round label or an explicit placeholder.
+
+## Prompt requirements
+
+Write the prompt itself in English. Keep on-slide copy in the language most appropriate to the source material and audience. Rewrite, shorten, combine, translate, or synthesize copy as needed for the selected hierarchy and page task. Preserve factual meaning and data identity; do not invent unsupported claims, numbers, affiliations, customer relationships, sources, or forecasts.
+
+Specify only elements that materially affect the result:
+
+- page mode and composition;
+- placement and hierarchy of the refined on-slide copy;
+- evidence containers and logical connections;
+- memory anchor and highlighted differences;
+- palette, typography, spacing, and background;
+- selected icons, images, lighting, depth, and effects;
+- selective constraints that materially improve the result.
+
+Select visual metaphors, large objects, icons, arrows, textures, lighting effects, and 3D scenes according to the page mode and communication value; neither require nor forbid them by default.
+
+## Failure modes
+
+- making an investor cover look like a product brochure instead of a capital snapshot;
+- inventing or omitting the financing-round label on a cover;
+- treating “one focal point” as “one enormous object”;
+- making every evidence-portfolio card equally loud, or filling a required but unsupported investment-overview category with generic copy instead of marking the evidence gap;
+- removing useful detail in the name of minimalism;
+- presenting dense content without hierarchy or scan order;
+- using charts or arrows that imply unsupported causality;
+- turning capability evolution into a generic company milestone timeline;
+- using logos, proximity, or connecting lines to imply an unverified institutional relationship;
+- decorating a technical page with unrelated circuitry;
+- making a team page image-heavy and credential-light;
+- obscuring dates, units, sources, qualifiers, or data-status labels;
+- returning commentary or options when the user requested only a prompt.
