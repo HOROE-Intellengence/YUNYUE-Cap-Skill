@@ -1,0 +1,4 @@
+interface:
+  display_name: "投资推介图"
+  short_description: "先排序亮点，再生成高冲击2K竖屏融资海报提示词"
+  default_prompt: "Use $create-investor-teaser 提炼2–3个投资亮点让我排序，再按排序生成1440×3200的高冲击9:20竖屏融资海报提示词。"
