@@ -1,4 +1,4 @@
 interface:
-  display_name: "投资推介图"
-  short_description: "先排序亮点，再生成仅披露融资额的高冲击2K竖屏融资海报提示词"
-  default_prompt: "Use $create-investor-teaser 提炼2–3个投资亮点让我排序，再按排序生成1440×3200的高冲击9:20竖屏融资海报提示词；融资信息只披露融资额，不披露估值或其他交易条款。"
+  display_name: "FA投资推介图"
+  short_description: "先定义资本命题，再以受控证据促成约谈"
+  default_prompt: "Use $create-investor-teaser 按FA品类定义叙事制作1440×3200的9:20投资推介图：先定产业控制点和项目定义权，再给商业证明、资本上限与融资对接。"

@@ -1,11 +1,23 @@
 ---
 name: create-investor-teaser
-description: Create, review, or optimize a high-impact 2K-class 9:20 vertical investor teaser from project materials, an existing poster, a BP, or a text brief. Use for 投资推介图、融资长图、项目一图流、朋友圈融资海报、9:20手机全屏投资图, or when Codex must compress a full investment story into one evidence-led image-generation prompt or finished image. First surface 2–3 defensible investment highlights and require the user to rank them, then order the teaser by that ranking. Require 1440 × 3200 px output, use capital-marketing poster energy with 25–35% skeuomorphic imagery, preserve confidential masks, distinguish company results from team history and forecasts, and disclose only the fundraising amount—not valuation or other transaction terms.
+description: Create, review, or optimize a FA-led, high-impact 2K-class 9:20 vertical investor teaser from project materials, an existing poster, a BP, or a text brief. Use for 投资推介图、融资长图、项目一图流、朋友圈融资海报、9:20手机全屏投资图, or when Codex must turn an investment thesis into a mobile-ready transaction narrative. Lead with a category-defining capital judgment, then use ranked, confidentiality-safe evidence to earn a next meeting; do not turn the teaser into a product catalogue or a compressed BP. Require 1440 × 3200 px output, use capital-marketing poster energy with 25–35% skeuomorphic imagery, preserve confidential masks, and distinguish company results from team history and forecasts.
 ---
 
 # Create Investor Teaser
 
-Turn scattered project evidence into one mobile-readable investment argument. Optimize for investor attention, belief, and a next conversation—not for exhaustive company introduction.
+Turn scattered project evidence into one mobile-readable FA transaction argument. Optimize for investor attention, category re-rating, belief, and a next conversation—not for exhaustive company introduction, a product catalogue, or a compressed BP.
+
+## Core doctrine: define the asset before proving it
+
+Start with the capital judgment the investor should accept: a structural industry shift is creating a new value pool or strategic control point, and this company has the right to define it. Then use only enough evidence to turn that judgment into a meeting.
+
+Default FA logic:
+
+`industry discontinuity → strategic control point → company right to define / win → commercial proof → capital-scale upside → team de-risking → financing action`
+
+Use this as a default, not a template. Preserve the user's explicit investment thesis and priority order. If the project is genuinely team-first or traction-first, lead with that instead.
+
+Do not confuse evidence density with credibility. Public-facing teasers may use customer categories, deal ranges, and aggregated results where exact names, amounts, or commercial terms belong in DD. The teaser must make the next meeting feel necessary; it does not need to settle every diligence question.
 
 ## Workflow
 
@@ -17,20 +29,21 @@ Treat image text extraction as fallible. Mark uncertain OCR tokens instead of si
 
 Extract an evidence ledger with:
 
-- company identity and current fundraising need, including the financing amount when supplied;
+- company identity and current financing round;
 - strongest team credentials;
 - product or technology wedge;
 - market ceiling and timing;
 - company-level commercial proof;
 - capital, customer, or institutional validation;
 - targets, forecasts, and FA upside scenarios;
+- the category claim / strategic control point and the proof needed to defend it;
 - confidentiality masks and disclosure limits.
 
 Classify each important claim internally as `[事实]`, `[推断]`, `[目标/预测]`, or `[待研究]`. Also record whether it is company performance, team historical experience, or third-party market data.
 
 Never restore an anonymized name, amount, location, customer, or institutional relationship. Preserve masks and placeholders exactly.
 
-### 2. Surface 2–3 candidate highlights and pause
+### 2. Surface 2–3 candidate highlights and establish the FA priority
 
 Distill exactly 2–3 candidate investment highlights from the evidence ledger. Use only the strongest defensible candidates from:
 
@@ -39,10 +52,13 @@ Distill exactly 2–3 candidate investment highlights from the evidence ledger. 
 3. **Market-first** — a structural change creates a large, time-sensitive opportunity.
 4. **Product-first** — a product or technical breakpoint makes a previously uneconomic solution viable.
 5. **Capital-validation-first** — a verified strategic investor or comparable capital event validates the asset category.
+6. **Category-definition-first** — an irreversible industry shift creates a new strategic control point; the company can become the platform, standard, or key entrance rather than a single-product supplier.
 
 Describe each candidate in one compact line using `亮点名称｜关键证据｜投资含义`. Do not expose private chain-of-thought; show only the evidence-backed conclusions needed for the user to decide.
 
-Present the numbered candidates to the user and ask them to rank the candidates by importance, for example `2 > 1 > 3`. This is a required checkpoint. Do not produce the final blueprint, on-image copy, image-generation prompt, or finished image until the user supplies the ranking. Skip the checkpoint only when the user has already provided an explicit ranking in the current request.
+When the user has already stated a clear narrative order, treat it as the ranking and state the inferred order before proceeding. Otherwise present the numbered candidates and ask the user to rank them, for example `2 > 1 > 3`. Do not produce the final blueprint, on-image copy, image-generation prompt, or finished image until the order is known.
+
+For a category-definition-led FA teaser, the usual order is: `structural/category opportunity > company traction > capital-scale upside`. Treat team as a risk-reducer and the financing ask as the transaction CTA unless the evidence makes either a true lead hook. Never silently impose this order over the user's stated priority.
 
 If a candidate is weak, conflicting, or legally risky, disclose that beside the candidate before ranking. Treat employer heritage as a credential, not endorsement. Do not use another company's logo unless authorization or an official relationship is verified.
 
@@ -58,11 +74,13 @@ Do not place a lower-ranked highlight before a higher-ranked highlight, give the
 
 ### 4. Write the investment thesis
 
-Write one sentence using this logic:
+For the default category-definition-led FA narrative, write one sentence using this logic:
 
-`credible right to win + specific product wedge + expanding value pool = reason to engage now`
+`structural discontinuity + strategic control point + credible right to define / win + commercial proof = reason to engage now`
 
-Prefer a sharp capital judgment over mission language. Avoid “致力于、赋能、领先解决方案、卡位赛道” unless evidence makes the phrase meaningful.
+Then identify the capital endgame separately: comparable platform, infrastructure, standard, installed-base, or data-asset value form. Use the comparison to open the value horizon, never to calculate the company's current valuation.
+
+Prefer a sharp capital judgment over mission language. Avoid “致力于、赋能、领先解决方案、卡位赛道” unless evidence makes the phrase meaningful. “定义权”“全球首创”“唯一”等 category claims require an evidence path—technical discontinuity, deployable capability, customer validation, data / verification accumulation, standards position, or a clearly qualified status. Do not use them as decorative superlatives.
 
 When defensible, select one capital-scale number—market ceiling, revenue, order, installed base, or clearly labeled forecast—to show why the opportunity can become large. This number supports the ranked story; it does not override the user's highlight order. Never fabricate a capital-scale number merely to fill the design.
 
@@ -74,12 +92,13 @@ Use 5–8 coherent visual modules. A three-number metric grid, credential matrix
 
 Typical vertical allocation, adjusted to the user's ranking:
 
-- 4–7%: company identity, financing amount only, track;
-- 30–38%: Rank 1 headline, decisive proof, and high-impact hero composition;
-- 18–24%: Rank 2 conclusion and proof;
-- 12–18%: Rank 3 conclusion and proof;
-- 10–16%: capital-scale number, forecast strip, or supporting evidence visualization when defensible;
-- 6–10%: source notes, transaction CTA, and contact.
+- 4–7%: company identity, financing round, track;
+- 30–38%: Rank 1 category headline, decisive proof, and high-impact hero composition;
+- 12–18%: Rank 1 causal proof—industry change → control point → company capability;
+- 12–18%: Rank 2 commercial proof;
+- 10–16%: Rank 3 capital-scale number, comparable, or clearly labelled FA upside strip;
+- 6–10%: team de-risking proof;
+- 6–10%: financing ask, source notes, transaction CTA, and contact.
 
 Adjust the ratios according to the lead hook. Read [layout-patterns.md](references/layout-patterns.md) when choosing a composition or when the user requests a materially different version.
 
@@ -94,6 +113,8 @@ Use high density only inside a clear structure. Do not convert every fact into a
 - Prefer one 3-row credential matrix over three biography cards.
 - Keep important qualifiers, years, units, regions, prediction labels, and source markers readable.
 - If the material cannot fit without shrinking the type, remove secondary evidence or create a second image; do not make unreadable fine print.
+
+Use the product only to prove the category claim. A three-metric ability grid, labelled mechanism, or capability equation is preferable to a SKU table when the asset is being sold as a platform. Put product line matrices, engineering states, and detailed specifications into the BP or DD unless they directly establish the investment thesis.
 
 ### 7. Translate evidence into visuals
 
@@ -115,7 +136,7 @@ Default to a high-impact capital-marketing poster with institutional-grade evide
 - Use luminous white or ice-blue backgrounds, saturated cobalt/electric blue, deep navy, and restrained metallic gold for one decisive capital or commercial number.
 - Use one oversized one- or two-line category headline, strong condensed Chinese typography, controlled bevel or extrusion, crisp dark-blue shadows, and large high-contrast numerals.
 - Allow polished blue gradient bands, lightly rounded glass panels, glossy 3D icons, rim lighting, controlled glow, rising arrows, and translucent chart columns when they strengthen hierarchy.
-- Use a recognizable rhythm: category headline and hero scene; financing badge; capital-scale band; three-number proof grid; Rank 2 module; Rank 3 module; closing moat or CTA.
+- Use a recognizable rhythm: identity plus financing badge; category headline and hero scene; causal capability / moat proof; Rank 2 commercial proof; capital-scale band; compact team proof; financing CTA.
 - Keep one dominant focal point per screen section. Do not give every card, icon, and label equal visual weight or render all text in 3D.
 - Avoid rainbow palettes, childish cartoons, cheap template effects, uncontrolled bloom, excessive plastic shine, illegible glassmorphism, and decorative clutter.
 - Reserve gold for verified credentials, financing information, commercial validation, or clearly labeled capital-scale figures; do not spread it decoratively.
@@ -123,15 +144,30 @@ Default to a high-impact capital-marketing poster with institutional-grade evide
 
 ### 9. Protect factual and transaction integrity
 
-- In the public teaser, fundraising disclosure is limited to the financing amount. Show the verified amount or `[待补融资额]`; never guess it.
-- Do not show the financing round, valuation (pre- or post-money, including ranges), ownership percentage, security price, share count, dilution, cap table, investor terms, or any other transaction field. Do not use calculations, diagrams, wording, or visual cues that could infer or reverse-engineer them.
-- Keep any valuation or transaction-term evidence exclusively in the private DD list; never place it in the blueprint's public copy, on-image copy, or image-generation prompt, even if it appears in source materials or is explicitly requested.
+- Show the current financing round or `[待补融资轮次]`; never guess it.
 - Preserve the subject of every credential. Do not merge adjacent facts into a new composite claim, extend one member's experience to another member, or extend experience in one product category to a related category without explicit support.
 - When source materials conflict on financing round, market definition, timing, units, or achievement status, do not silently reconcile them. Preserve the conflict in the working notes and use an exact placeholder or a clearly qualified version on the image.
 - Distinguish team historical track record from current company results in the on-image copy.
-- Label forecasts, targets, and FA scenarios when investors could read them as facts.
+- Label forecasts, targets, and FA scenarios when investors could read them as facts. Use low-noise labels such as `公司事实`、`团队历史`、`目标`、`FA上行情景` or a unified footnote; do not plaster `[事实]` on every line.
 - Give market figures a year, geography, definition, and source status. Keep full calculations and confidential evidence in a DD list rather than cramming them on the image.
+- Do not disclose or infer the project's valuation, ownership percentage, security price, or terms unless explicitly provided and requested.
 - Never imply endorsement, technology transfer, customer status, or institutional affiliation through logos, proximity, connecting lines, or visual grouping.
+
+### FA disclosure boundaries
+
+- Put the financing round in the top identity band. Put only the financing amount and use of proceeds in the closing CTA unless the user explicitly requests more.
+- Use anonymized customer type, order range, or status when that proves commercial validation without compromising confidentiality. Never “improve” an anonymous proof into a specific customer, price, or contract term.
+- Mark targets and FA scenarios; preserve the distinction between company results, team history, third-party data, and FA inference.
+- Date and source-ready every public comparable. A comparable proves the possible value form or growth path; it does not justify an asserted project valuation.
+- Give a direct contact / FA handoff at the footer for a forwardable poster. If no contact is supplied, use `[项目对接方式待补]`.
+
+### Avoid these failure modes
+
+- Leading with product matrices, detailed SKUs, or engineering status before the asset-level judgment;
+- Turning a carefully confidential teaser into a public DD exhibit through exact customer, order, or price disclosure;
+- Replacing a capital comparable with a current-round valuation claim;
+- Treating short-term performance specifications as a permanent moat;
+- Using a category-definition claim without showing the industry discontinuity and a believable path from capability to customer validation to accumulated barrier.
 
 ## Team-first rules
 
@@ -147,7 +183,7 @@ Add one compact team coverage line and one historical evidence strip when suppor
 
 ## Output contract
 
-Before the user ranks the 2–3 candidate highlights, output only the numbered candidates and the ranking question. After the user ranks them, follow the requested artifact mode below.
+Before the priority order is known, output only the numbered candidates and the ranking question. When the user has already stated a clear narrative order, state the inferred order and then follow the requested artifact mode below.
 
 Unless the user requests only one artifact, return:
 
@@ -172,9 +208,10 @@ If the user asks for:
 - 核心投资叙事：
 - 用户亮点排序：1 > 2 > 3
 - 输出规格：9:20竖屏 | 1440 × 3200 px | 2K/QHD+
-- 主钩子：团队 / 兑现 / 市场 / 产品 / 资本验证
+- 主钩子：品类定义 / 团队 / 兑现 / 市场 / 产品 / 资本验证
+- 叙事模式：FA品类定义 / 团队先行 / 兑现先行 / 其他
 - 标题：
-- 顶部身份带：公司名 | 融资额（或`[待补融资额]`） | 细分赛道
+- 顶部身份带：公司名 | 融资轮次 | 细分赛道
 - 模块1：容器类型 | 结论 | 证明
 - 模块2：容器类型 | 结论 | 证明
 - 模块3/4/5：按需使用
@@ -193,12 +230,11 @@ If the user asks for:
 
 Before delivery, verify:
 
-- Has the user ranked the 2–3 candidate highlights, or supplied an explicit ranking in the request?
+- Has the user ranked the 2–3 candidate highlights, supplied an explicit ranking, or clearly stated a narrative order that has been surfaced back as the inferred ranking?
 - Does the reading order and visual emphasis exactly follow that ranking?
 - Does the prompt specify only `9:20 vertical, 1440 × 3200 px, 2K/QHD+ class` and explicitly require native high-resolution rendering?
 - Is purely skeuomorphic imagery between roughly 25–35% and never above 35% of the total canvas area?
-- Can an investor identify the company level, financing amount (when supplied), and lead hook in three seconds?
-- Does every public-facing artifact show financing amount as the only transaction disclosure, with no valuation or other terms that could reveal or reverse-engineer it?
+- Can an investor identify the company level, financing stage, and lead hook in three seconds?
 - Does every section strengthen the same investment thesis?
 - Is company traction separated from team history?
 - Are predictions and targets visibly qualified where needed?
