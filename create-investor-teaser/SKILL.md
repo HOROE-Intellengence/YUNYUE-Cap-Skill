@@ -1,6 +1,6 @@
 ---
 name: create-investor-teaser
-description: Create, review, or optimize a high-impact 2K-class 9:20 vertical investor teaser from project materials, an existing poster, a BP, or a text brief. Use for 投资推介图、融资长图、项目一图流、朋友圈融资海报、9:20手机全屏投资图, or when Codex must compress a full investment story into one evidence-led image-generation prompt or finished image. First surface 2–3 defensible investment highlights and require the user to rank them, then order the teaser by that ranking. Require 1440 × 3200 px output, use capital-marketing poster energy with 25–35% skeuomorphic imagery, preserve confidential masks, and distinguish company results from team history and forecasts.
+description: Create, review, or optimize a high-impact 2K-class 9:20 vertical investor teaser from project materials, an existing poster, a BP, or a text brief. Use for 投资推介图、融资长图、项目一图流、朋友圈融资海报、9:20手机全屏投资图, or when Codex must compress a full investment story into one evidence-led image-generation prompt or finished image. First surface 2–3 defensible investment highlights and require the user to rank them, then order the teaser by that ranking. Require 1440 × 3200 px output, use capital-marketing poster energy with 25–35% skeuomorphic imagery, preserve confidential masks, distinguish company results from team history and forecasts, and disclose only the fundraising amount—not valuation or other transaction terms.
 ---
 
 # Create Investor Teaser
@@ -17,7 +17,7 @@ Treat image text extraction as fallible. Mark uncertain OCR tokens instead of si
 
 Extract an evidence ledger with:
 
-- company identity and current financing round;
+- company identity and current fundraising need, including the financing amount when supplied;
 - strongest team credentials;
 - product or technology wedge;
 - market ceiling and timing;
@@ -74,7 +74,7 @@ Use 5–8 coherent visual modules. A three-number metric grid, credential matrix
 
 Typical vertical allocation, adjusted to the user's ranking:
 
-- 4–7%: company identity, financing round, track;
+- 4–7%: company identity, financing amount only, track;
 - 30–38%: Rank 1 headline, decisive proof, and high-impact hero composition;
 - 18–24%: Rank 2 conclusion and proof;
 - 12–18%: Rank 3 conclusion and proof;
@@ -123,13 +123,14 @@ Default to a high-impact capital-marketing poster with institutional-grade evide
 
 ### 9. Protect factual and transaction integrity
 
-- Show the current financing round or `[待补融资轮次]`; never guess it.
+- In the public teaser, fundraising disclosure is limited to the financing amount. Show the verified amount or `[待补融资额]`; never guess it.
+- Do not show the financing round, valuation (pre- or post-money, including ranges), ownership percentage, security price, share count, dilution, cap table, investor terms, or any other transaction field. Do not use calculations, diagrams, wording, or visual cues that could infer or reverse-engineer them.
+- Keep any valuation or transaction-term evidence exclusively in the private DD list; never place it in the blueprint's public copy, on-image copy, or image-generation prompt, even if it appears in source materials or is explicitly requested.
 - Preserve the subject of every credential. Do not merge adjacent facts into a new composite claim, extend one member's experience to another member, or extend experience in one product category to a related category without explicit support.
 - When source materials conflict on financing round, market definition, timing, units, or achievement status, do not silently reconcile them. Preserve the conflict in the working notes and use an exact placeholder or a clearly qualified version on the image.
 - Distinguish team historical track record from current company results in the on-image copy.
 - Label forecasts, targets, and FA scenarios when investors could read them as facts.
 - Give market figures a year, geography, definition, and source status. Keep full calculations and confidential evidence in a DD list rather than cramming them on the image.
-- Do not disclose or infer the project's valuation, ownership percentage, security price, or terms unless explicitly provided and requested.
 - Never imply endorsement, technology transfer, customer status, or institutional affiliation through logos, proximity, connecting lines, or visual grouping.
 
 ## Team-first rules
@@ -173,7 +174,7 @@ If the user asks for:
 - 输出规格：9:20竖屏 | 1440 × 3200 px | 2K/QHD+
 - 主钩子：团队 / 兑现 / 市场 / 产品 / 资本验证
 - 标题：
-- 顶部身份带：公司名 | 融资轮次 | 细分赛道
+- 顶部身份带：公司名 | 融资额（或`[待补融资额]`） | 细分赛道
 - 模块1：容器类型 | 结论 | 证明
 - 模块2：容器类型 | 结论 | 证明
 - 模块3/4/5：按需使用
@@ -196,7 +197,8 @@ Before delivery, verify:
 - Does the reading order and visual emphasis exactly follow that ranking?
 - Does the prompt specify only `9:20 vertical, 1440 × 3200 px, 2K/QHD+ class` and explicitly require native high-resolution rendering?
 - Is purely skeuomorphic imagery between roughly 25–35% and never above 35% of the total canvas area?
-- Can an investor identify the company level, financing stage, and lead hook in three seconds?
+- Can an investor identify the company level, financing amount (when supplied), and lead hook in three seconds?
+- Does every public-facing artifact show financing amount as the only transaction disclosure, with no valuation or other terms that could reveal or reverse-engineer it?
 - Does every section strengthen the same investment thesis?
 - Is company traction separated from team history?
 - Are predictions and targets visibly qualified where needed?
