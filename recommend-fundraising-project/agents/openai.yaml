@@ -1,0 +1,4 @@
+interface:
+  display_name: "一句话推荐项目"
+  short_description: "把项目资料压缩成可直接转发、可核验的结构化融资推介文案"
+  default_prompt: "Use $recommend-fundraising-project to turn these materials into a concise, evidence-led Chinese fundraising project recommendation."

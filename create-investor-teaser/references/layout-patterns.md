@@ -9,6 +9,8 @@ Global visual constraint for every pattern:
 - a labeled technical cutaway or evidence chart is explanatory; decorative or unlabeled realism counts toward the 35% cap;
 - Rank 1 always appears before and larger than Rank 2; Rank 2 always appears before and larger than Rank 3.
 
+Route by evidence state as well as highlight type. If dated or comparative evidence proves a `from A to B` transition, prefer a traction-first composition with one growth chart, stage band, or causal flow. If the evidence proves only a strong current level, use a static proof stack or matrix; do not add rising arrows or imply acceleration. If technology is strong but commercial transition is not yet proven, use a qualification- or product-first composition and label the current validation stage precisely.
+
 ## High-impact poster rhythm
 
 Use 5–8 coherent modules in this general rhythm:
@@ -40,7 +42,7 @@ Use `member/role | evidence-bearing history | transferable capability`. Avoid he
 
 ## Traction-first proof stack
 
-Use when company-level revenue, orders, customers, certifications, deployments, or retention is strong.
+Use when company-level revenue, orders, customers, certifications, deployments, or retention is strong, especially when the evidence shows a dated commercial transition or growth inflection.
 
 Recommended fixed 9:20 allocation when traction is Rank 1:
 
@@ -51,7 +53,7 @@ Recommended fixed 9:20 allocation when traction is Rank 1:
 - 17% compact growth chart or capital-scale band;
 - 9% source notes, transaction CTA, and footer.
 
-Do not mix team historical delivery with current company traction. Preserve anonymous customer masks and NDA labels.
+Do not mix team historical delivery with current company traction. Use a growth chart only when a time series or comparable period exists; otherwise use a proof stack. Preserve anonymous customer masks and NDA labels.
 
 ## Market-first conclusion number
 

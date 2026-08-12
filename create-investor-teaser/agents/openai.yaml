@@ -1,4 +1,4 @@
 interface:
   display_name: "FA投资推介图"
   short_description: "先定义资本命题，再以受控证据促成约谈"
-  default_prompt: "Use $create-investor-teaser 按FA品类定义叙事制作1440×3200的9:20投资推介图：先定产业控制点和项目定义权，再给商业证明、资本上限与融资对接。"
+  default_prompt: "Use $create-investor-teaser 制作1440×3200的9:20投资推介图：先识别项目从A到B的关键变化及外部红利到公司兑现的传导，再用最强可辩护证据建立视觉层级与融资对接。"

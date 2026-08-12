@@ -1,21 +1,31 @@
 ---
 name: create-investor-teaser
-description: Create, review, or optimize a FA-led, high-impact 2K-class 9:20 vertical investor teaser from project materials, an existing poster, a BP, or a text brief. Use for 投资推介图、融资长图、项目一图流、朋友圈融资海报、9:20手机全屏投资图, or when Codex must turn an investment thesis into a mobile-ready transaction narrative. Lead with a category-defining capital judgment, then use ranked, confidentiality-safe evidence to earn a next meeting; do not turn the teaser into a product catalogue or a compressed BP. Require 1440 × 3200 px output, use capital-marketing poster energy with 25–35% skeuomorphic imagery, preserve confidential masks, and distinguish company results from team history and forecasts.
+description: Create, review, or optimize a FA-led, high-impact 2K-class 9:20 vertical investor teaser from project materials, an existing poster, a BP, or a text brief. Use for 投资推介图、融资长图、项目一图流、朋友圈融资海报、9:20手机全屏投资图, or when Codex must turn an investment thesis into a mobile-ready transaction narrative. Compress project evidence into an investor judgment—opportunity, momentum, qualification, compounding, and execution—then use the minimum ranked, confidentiality-safe proof needed to earn a next meeting; do not turn the teaser into a product catalogue or a compressed BP. Require 1440 × 3200 px output, use capital-marketing poster energy with 25–35% skeuomorphic imagery, preserve confidential masks, and distinguish company results from team history and forecasts.
 ---
 
 # Create Investor Teaser
 
 Turn scattered project evidence into one mobile-readable FA transaction argument. Optimize for investor attention, category re-rating, belief, and a next conversation—not for exhaustive company introduction, a product catalogue, or a compressed BP.
 
-## Core doctrine: define the asset before proving it
+## Core doctrine: compress the investment judgment
 
-Start with the capital judgment the investor should accept: a structural industry shift is creating a new value pool or strategic control point, and this company has the right to define it. Then use only enough evidence to turn that judgment into a meeting.
+Prioritize investment-judgment compression, impact, and simple high-signal information over evidence completeness. Before mapping `3/5/15`, identify what state the project is moving from and to: let investors recognize the opportunity in three seconds, see the hardest proof and what has changed in five seconds, and retell how an external driver becomes customer demand, company proof, and durable growth in fifteen seconds (`3秒理解机会 → 5秒看见变化 → 15秒复述传导`). A teaser is not a compressed BP; put product specifications, customer locations, deployment process, contract detail, full calculations, and confidential proof in the BP or DD unless they themselves change the investment judgment.
 
-Default FA logic:
+Every teaser follows one transaction path:
 
-`industry discontinuity → strategic control point → company right to define / win → commercial proof → capital-scale upside → team de-risking → financing action`
+`investment judgment → key transition → decisive proof → durability mechanism → financing CTA`
 
-Use this as a default, not a template. Preserve the user's explicit investment thesis and priority order. If the project is genuinely team-first or traction-first, lead with that instead.
+Build the judgment from 3–4 of five modules:
+
+1. **Opportunity** — category, supply-demand gap, or structural window.
+2. **Momentum** — revenue, contracts, orders, customers, production, or growth stage.
+3. **Qualification** — technical performance, product breakthrough, or right to win.
+4. **Compounding** — platform, data, closed loop, replication, or switching cost.
+5. **Execution** — team, qualification, delivery, cases, or financing stage.
+
+Select one module or a combination as the visual lead, then use one or two decisive proofs and one durability explanation. The four composable narrative paths in [teaser-judgment-patterns.md](references/teaser-judgment-patterns.md) help arrange those modules; they are not industry labels or mutually exclusive lead-hook categories.
+
+Preserve the user's explicit investment thesis and priority order. When no order is stated, infer the lead from `investment impact × fact strength × reader comprehension`; ask the user to choose only when genuinely different leads are equally strong. Financing completion is a stage signal, not commercial proof, unless its investor or terms constitute separately verified validation.
 
 Do not confuse evidence density with credibility. Public-facing teasers may use customer categories, deal ranges, and aggregated results where exact names, amounts, or commercial terms belong in DD. The teaser must make the next meeting feel necessary; it does not need to settle every diligence question.
 
@@ -37,32 +47,22 @@ Extract an evidence ledger with:
 - capital, customer, or institutional validation;
 - targets, forecasts, and FA upside scenarios;
 - the category claim / strategic control point and the proof needed to defend it;
+- the past state, current state, key transition, external or internal driver, and dated proof of that transition;
 - confidentiality masks and disclosure limits.
+
+For each claim, record its investor translation: whether it proves opportunity, momentum, qualification, compounding, or execution, and whether it proves a stable level or an accelerating change. Do not promote a raw product, customer, location, or process fact into the lead without translating what it changes in the investment judgment.
 
 Classify each important claim internally as `[事实]`, `[推断]`, `[目标/预测]`, or `[待研究]`. Also record whether it is company performance, team historical experience, or third-party market data.
 
 Never restore an anonymized name, amount, location, customer, or institutional relationship. Preserve masks and placeholders exactly.
 
-### 2. Surface 2–3 candidate highlights and establish the FA priority
+### 2. Select the investment judgment and proof
 
-Distill exactly 2–3 candidate investment highlights from the evidence ledger. Use only the strongest defensible candidates from:
+Identify the project's key transition or growth inflection first, then select 3–4 of the five judgment modules. Choose one visual lead and two supporting proofs: one proves the lead judgment; the other explains durability, moat, or upside. When the evidence supports it, make the lead connect `external driver → customer demand → company-level current proof`; otherwise state the strongest static judgment without inventing motion. Describe the chosen order in one compact line using `投资判断｜关键变化｜决定性证明｜持续性机制`; do not expose private chain-of-thought.
 
-1. **Team-first** — recognizable operating pedigree or an unusually complete founding team lowers execution risk.
-2. **Traction-first** — revenue, orders, customers, certifications, or deployments already prove demand.
-3. **Market-first** — a structural change creates a large, time-sensitive opportunity.
-4. **Product-first** — a product or technical breakpoint makes a previously uneconomic solution viable.
-5. **Capital-validation-first** — a verified strategic investor or comparable capital event validates the asset category.
-6. **Category-definition-first** — an irreversible industry shift creates a new strategic control point; the company can become the platform, standard, or key entrance rather than a single-product supplier.
+Honor an explicit user narrative order. Otherwise infer the order from the evidence and proceed; do not block the teaser waiting for a ranking. If a proposed judgment is weak, conflicting, or legally risky, downgrade or qualify it visibly and select another evidence-backed judgment. Treat employer heritage as a credential, not endorsement. Do not use another company's logo unless authorization or an official relationship is verified.
 
-Describe each candidate in one compact line using `亮点名称｜关键证据｜投资含义`. Do not expose private chain-of-thought; show only the evidence-backed conclusions needed for the user to decide.
-
-When the user has already stated a clear narrative order, treat it as the ranking and state the inferred order before proceeding. Otherwise present the numbered candidates and ask the user to rank them, for example `2 > 1 > 3`. Do not produce the final blueprint, on-image copy, image-generation prompt, or finished image until the order is known.
-
-For a category-definition-led FA teaser, the usual order is: `structural/category opportunity > company traction > capital-scale upside`. Treat team as a risk-reducer and the financing ask as the transaction CTA unless the evidence makes either a true lead hook. Never silently impose this order over the user's stated priority.
-
-If a candidate is weak, conflicting, or legally risky, disclose that beside the candidate before ranking. Treat employer heritage as a credential, not endorsement. Do not use another company's logo unless authorization or an official relationship is verified.
-
-### 3. Apply the user's ranking
+### 3. Apply the stated or inferred visual priority
 
 Map the user's order directly to the teaser's reading order and visual hierarchy:
 
@@ -70,19 +70,23 @@ Map the user's order directly to the teaser's reading order and visual hierarchy
 2. **Rank 2** — first supporting argument, medium emphasis, immediately after Rank 1.
 3. **Rank 3** — compact supporting argument or footer proof, always after Rank 2.
 
-Do not place a lower-ranked highlight before a higher-ranked highlight, give them equal visual weight, or silently replace the user's order. If the highest-ranked claim is not safe to state as fact, keep its priority but qualify it visibly as `[目标/预测]`, `[推断]`, or `[待研究]` and avoid unsupported certainty.
+Do not place a lower-ranked proof before a higher-ranked judgment or give them equal visual weight. The largest title must state an investor judgment, not a customer name, product model, technical parameter, location, or deployment step. If the lead claim is not safe to state as fact, qualify it visibly as `[目标/预测]`, `[推断]`, or `[待研究]` and avoid unsupported certainty.
 
 ### 4. Write the investment thesis
 
-For the default category-definition-led FA narrative, write one sentence using this logic:
+Write one sentence using this logic:
 
-`structural discontinuity + strategic control point + credible right to define / win + commercial proof = reason to engage now`
+`investment judgment + key transition + decisive proof + durability mechanism = reason to engage now`
+
+Write the headline as an investment conclusion, then use the proof to substantiate it and the final module to explain why it can continue. Translate raw facts before placing them on image: a multi-site rollout may prove replicability; a technical parameter may prove high-end entry qualification; a customer order may prove momentum. Do not make the raw fact the headline unless it is itself the investment conclusion.
+
+Use the strongest conclusion the evidence can defend. Stable proof may support “扎实” or “已验证”; use change language such as “放量”“爆发”“加速” only when dated or comparative evidence shows a real slope, and apply it to the correct object. Contract value, orders, repeat purchase, delivery, and revenue may all prove momentum, but they are not interchangeable.
 
 Then identify the capital endgame separately: comparable platform, infrastructure, standard, installed-base, or data-asset value form. Use the comparison to open the value horizon, never to calculate the company's current valuation.
 
 Prefer a sharp capital judgment over mission language. Avoid “致力于、赋能、领先解决方案、卡位赛道” unless evidence makes the phrase meaningful. “定义权”“全球首创”“唯一”等 category claims require an evidence path—technical discontinuity, deployable capability, customer validation, data / verification accumulation, standards position, or a clearly qualified status. Do not use them as decorative superlatives.
 
-When defensible, select one capital-scale number—market ceiling, revenue, order, installed base, or clearly labeled forecast—to show why the opportunity can become large. This number supports the ranked story; it does not override the user's highlight order. Never fabricate a capital-scale number merely to fill the design.
+When defensible, select one capital-scale number—market ceiling, revenue, order, installed base, or clearly labeled forecast—to show why the opportunity can become large. This number supports the selected visual judgment; it does not override the user's explicit priority. Never fabricate a capital-scale number merely to fill the design.
 
 ### 5. Enforce the vertical composition
 
@@ -90,17 +94,19 @@ Every image-generation prompt and finished teaser must specify exactly `9:20 ver
 
 Use 5–8 coherent visual modules. A three-number metric grid, credential matrix, timeline, process loop, or coordinated hero composition counts as one module when it shares one visual system. Avoid dozens of unrelated cards.
 
-Typical vertical allocation, adjusted to the user's ranking:
+Typical vertical allocation, adjusted to the selected investment judgment:
 
 - 4–7%: company identity, financing round, track;
-- 30–38%: Rank 1 category headline, decisive proof, and high-impact hero composition;
-- 12–18%: Rank 1 causal proof—industry change → control point → company capability;
-- 12–18%: Rank 2 commercial proof;
+- 30–38%: Rank 1 investment-judgment headline, decisive proof, and high-impact hero composition;
+- 12–18%: proof that validates the lead judgment;
+- 12–18%: durability or second supporting proof;
 - 10–16%: Rank 3 capital-scale number, comparable, or clearly labelled FA upside strip;
 - 6–10%: team de-risking proof;
 - 6–10%: financing ask, source notes, transaction CTA, and contact.
 
-Adjust the ratios according to the lead hook. Read [layout-patterns.md](references/layout-patterns.md) when choosing a composition or when the user requests a materially different version.
+For a momentum-led teaser, the hero zone states the opportunity-and-momentum judgment and includes one decisive contract, revenue, order, or customer proof; the next zone explains qualification or replication; industry and technology explain durability. When dated or comparative evidence proves acceleration, visualize the transition with a growth chart, stage band, or directional flow. When only a strong current level is known, use a proof stack or metric matrix and do not imply a rising trajectory. Keep the financing round in the identity band and place financing amount only in the closing CTA.
+
+Adjust the ratios according to the selected investment judgment. Read [layout-patterns.md](references/layout-patterns.md) when choosing a composition or when the user requests a materially different version.
 
 ### 6. Control information density
 
@@ -114,7 +120,7 @@ Use high density only inside a clear structure. Do not convert every fact into a
 - Keep important qualifiers, years, units, regions, prediction labels, and source markers readable.
 - If the material cannot fit without shrinking the type, remove secondary evidence or create a second image; do not make unreadable fine print.
 
-Use the product only to prove the category claim. A three-metric ability grid, labelled mechanism, or capability equation is preferable to a SKU table when the asset is being sold as a platform. Put product line matrices, engineering states, and detailed specifications into the BP or DD unless they directly establish the investment thesis.
+Use product and technical material only to prove entry qualification, customer result, or durable advantage. A three-metric ability grid, labelled mechanism, or capability equation is preferable to a SKU table when it translates a technical fact into investment meaning. Put product line matrices, engineering states, customer locations, deployment steps, and detailed specifications into the BP or DD unless they directly establish the investment judgment.
 
 ### 7. Translate evidence into visuals
 
@@ -126,6 +132,7 @@ Use high-impact imagery to create immediate category recognition, then anchor it
 - A labeled technical cutaway, mechanism diagram, or evidence chart remains information-bearing when its primary function is explanation; decorative or unlabeled realism counts toward the 35% cap.
 - Use exploded views or technical cutaways only when the mechanism itself is the investment thesis.
 - Use category-scale imagery such as a global network, installed-base field, factory, infrastructure system, chip stack, equipment cluster, or product ecosystem when it directly supports the thesis.
+- Use rising arrows, before/after states, timelines, and growth charts only when the evidence establishes the direction and time boundary; visual motion is a factual claim, not decoration.
 - Use people only when operations, service capability, or team execution is part of the proof. Unless authentic team images are supplied, keep people non-identifiable and avoid implying they are actual employees.
 - Do not add unrelated handshakes, rockets, generic boardrooms, or random technology objects.
 
@@ -134,9 +141,9 @@ Use high-impact imagery to create immediate category recognition, then anchor it
 Default to a high-impact capital-marketing poster with institutional-grade evidence discipline—not a quiet research memo and not a chaotic startup-event poster.
 
 - Use luminous white or ice-blue backgrounds, saturated cobalt/electric blue, deep navy, and restrained metallic gold for one decisive capital or commercial number.
-- Use one oversized one- or two-line category headline, strong condensed Chinese typography, controlled bevel or extrusion, crisp dark-blue shadows, and large high-contrast numerals.
+- Use one oversized one- or two-line investment-judgment headline, strong condensed Chinese typography, controlled bevel or extrusion, crisp dark-blue shadows, and large high-contrast numerals.
 - Allow polished blue gradient bands, lightly rounded glass panels, glossy 3D icons, rim lighting, controlled glow, rising arrows, and translucent chart columns when they strengthen hierarchy.
-- Use a recognizable rhythm: identity plus financing badge; category headline and hero scene; causal capability / moat proof; Rank 2 commercial proof; capital-scale band; compact team proof; financing CTA.
+- Use one recognizable rhythm: identity plus financing badge; investment-judgment headline and decisive proof; validation proof; durability mechanism; compact execution or capital-scale proof; financing CTA. Scale and order the modules according to the selected priority.
 - Keep one dominant focal point per screen section. Do not give every card, icon, and label equal visual weight or render all text in 3D.
 - Avoid rainbow palettes, childish cartoons, cheap template effects, uncontrolled bloom, excessive plastic shine, illegible glassmorphism, and decorative clutter.
 - Reserve gold for verified credentials, financing information, commercial validation, or clearly labeled capital-scale figures; do not spread it decoratively.
@@ -148,6 +155,7 @@ Default to a high-impact capital-marketing poster with institutional-grade evide
 - Preserve the subject of every credential. Do not merge adjacent facts into a new composite claim, extend one member's experience to another member, or extend experience in one product category to a related category without explicit support.
 - When source materials conflict on financing round, market definition, timing, units, or achievement status, do not silently reconcile them. Preserve the conflict in the working notes and use an exact placeholder or a clearly qualified version on the image.
 - Distinguish team historical track record from current company results in the on-image copy.
+- Keep revenue, contract value, orders, repeat purchase, delivery, customer introduction, and mass production distinct. Raise the rhetorical intensity within the fact boundary, but never convert one evidence type into another.
 - Label forecasts, targets, and FA scenarios when investors could read them as facts. Use low-noise labels such as `公司事实`、`团队历史`、`目标`、`FA上行情景` or a unified footnote; do not plaster `[事实]` on every line.
 - Give market figures a year, geography, definition, and source status. Keep full calculations and confidential evidence in a DD list rather than cramming them on the image.
 - Do not disclose or infer the project's valuation, ownership percentage, security price, or terms unless explicitly provided and requested.
@@ -167,11 +175,12 @@ Default to a high-impact capital-marketing poster with institutional-grade evide
 - Turning a carefully confidential teaser into a public DD exhibit through exact customer, order, or price disclosure;
 - Replacing a capital comparable with a current-round valuation claim;
 - Treating short-term performance specifications as a permanent moat;
-- Using a category-definition claim without showing the industry discontinuity and a believable path from capability to customer validation to accumulated barrier.
+- Using arrows, growth charts, or “爆发/放量” language without dated or comparative evidence of change;
+- Using an investment judgment without a believable path from decisive proof to durable advantage.
 
 ## Team-first rules
 
-When team pedigree is the lead hook, place it before the product and market sections. Use a compact credential matrix or stacked evidence rows with strong icons rather than three unrelated biography cards.
+When team pedigree is the visual lead, place it before the product and market sections. Use a compact credential matrix or stacked evidence rows with strong icons rather than three unrelated biography cards.
 
 Preferred matrix:
 
@@ -183,11 +192,11 @@ Add one compact team coverage line and one historical evidence strip when suppor
 
 ## Output contract
 
-Before the priority order is known, output only the numbered candidates and the ranking question. When the user has already stated a clear narrative order, state the inferred order and then follow the requested artifact mode below.
+Select the visual lead and supporting proofs from the evidence, respecting any explicit user priority. State the inferred priority when it materially helps the user review the teaser; ask for a decision only when competing investment judgments are genuinely close and would create materially different visual narratives. Then follow the requested artifact mode below.
 
 Unless the user requests only one artifact, return:
 
-1. **Investment judgment** — one short paragraph naming the lead hook and what to remove.
+1. **Investment judgment** — one short paragraph naming the visual lead and what to remove.
 2. **One-page blueprint** — thesis, headline, section order, approximate canvas allocation, evidence containers, visual anchor, and footer.
 3. **Final on-image copy** — exact copy grouped by visual zone; retain placeholders and masks.
 4. **Image-generation prompt** — one self-contained English prompt; keep on-image copy in the audience's language and specify the requested aspect ratio.
@@ -198,18 +207,20 @@ If the user asks for:
 - **review only**: diagnose and propose the blueprint without generating an image;
 - **prompt only**: output only the ready-to-use image-generation prompt;
 - **a finished image**: first finalize the evidence and prompt, then use the image-generation capability; inspect the result and iterate for legibility, hierarchy, factual accuracy, and aspect ratio;
-- **another version**: change the lead hook, evidence order, or visual logic—not just adjectives and colors.
+- **another version**: change the visual lead, evidence order, or visual logic—not just adjectives and colors.
 
 ## Blueprint template
 
 ```text
 ### 单张投资推介图
 - 页面职责：放大回报上限 / 降低失败概率 / 制造投资紧迫性
-- 核心投资叙事：
-- 用户亮点排序：1 > 2 > 3
+- 核心投资判断：
+- 关键变化：从____到____ | 驱动：____ | 兑现证据：____
+- 证据优先级：用户指定 / 证据推断
 - 输出规格：9:20竖屏 | 1440 × 3200 px | 2K/QHD+
-- 主钩子：品类定义 / 团队 / 兑现 / 市场 / 产品 / 资本验证
-- 叙事模式：FA品类定义 / 团队先行 / 兑现先行 / 其他
+- 判断模块：机会 / 势能 / 资格 / 复利 / 兑现（选择 3–4 个）
+- 视觉主判断：
+- 叙事模式：投资判断 → 关键变化 → 决定性证明 → 持续性机制 → 融资 CTA
 - 标题：
 - 顶部身份带：公司名 | 融资轮次 | 细分赛道
 - 模块1：容器类型 | 结论 | 证明
@@ -230,11 +241,16 @@ If the user asks for:
 
 Before delivery, verify:
 
-- Has the user ranked the 2–3 candidate highlights, supplied an explicit ranking, or clearly stated a narrative order that has been surfaced back as the inferred ranking?
-- Does the reading order and visual emphasis exactly follow that ranking?
+- Is the visual lead either user-specified or clearly inferred from the strongest investment judgment, and do the visual priority and reading order follow it?
 - Does the prompt specify only `9:20 vertical, 1440 × 3200 px, 2K/QHD+ class` and explicitly require native high-resolution rendering?
 - Is purely skeuomorphic imagery between roughly 25–35% and never above 35% of the total canvas area?
-- Can an investor identify the company level, financing stage, and lead hook in three seconds?
+- Can an investor identify the opportunity category and investment judgment in three seconds?
+- Can an investor see what changed and the decisive proof in five seconds, then retell how the external driver becomes customer demand, company proof, and durability in fifteen seconds?
+- Does every headline state an investment judgment rather than a customer, product, location, parameter, or deployment-process label?
+- When momentum is a proof, do labels distinguish contract value, revenue, customer introduction, delivery, repeat purchase, and mass production accurately?
+- Do growth language and visual motion appear only when dated or comparative evidence proves a real change, while static evidence remains visually static?
+- Does every technical number translate into entry qualification, customer result, or competitive advantage?
+- Has the image removed facts that do not change the investment judgment?
 - Does every section strengthen the same investment thesis?
 - Is company traction separated from team history?
 - Are predictions and targets visibly qualified where needed?
