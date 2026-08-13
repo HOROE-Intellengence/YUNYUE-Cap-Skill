@@ -1,0 +1,4 @@
+interface:
+  display_name: "Premium Slide Prompt"
+  short_description: "Create concise, visually unified investor-slide prompts"
+  default_prompt: "Use $premium-slide-prompt to turn this investor deck outline into concise, production-ready image-generation prompts with one locked deck-wide visual system."

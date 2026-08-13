@@ -1,0 +1,6 @@
+interface:
+  display_name: "BP Narrative Outline"
+  short_description: "Build evidence-led investor BP narratives and outlines"
+  default_prompt: "Use $bp-narrative-outline to turn these project materials into an investor-ready BP outline."
+policy:
+  allow_implicit_invocation: false
