@@ -1,6 +1,6 @@
 # Investor Teaser Layout Patterns
 
-Read this reference after the user ranks the 2–3 candidate highlights. Every pattern is fixed to `9:20 vertical, 1440 × 3200 px, 2K/QHD+ class`; never adapt these patterns to another aspect ratio or lower-resolution canvas.
+Read this reference when applying the stated or inferred visual priority. Every pattern is fixed to `9:20 vertical, 1440 × 3200 px, 2K/QHD+ class`; never adapt these patterns to another aspect ratio or lower-resolution canvas.
 
 Global visual constraint for every pattern:
 
@@ -27,7 +27,7 @@ Use luminous white or ice-blue backgrounds, saturated cobalt/electric blue, deep
 
 ## Team-first banker matrix
 
-Use when employer pedigree, product ownership, technical completeness, or mass-production history is the strongest risk reducer.
+Use when the user chooses the team as the lead or when team credentials are the strongest supported lead.
 
 Recommended fixed 9:20 allocation when team is Rank 1:
 

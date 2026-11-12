@@ -25,7 +25,7 @@ Build the judgment from 3–4 of five modules:
 
 Select one module or a combination as the visual lead, then use one or two decisive proofs and one durability explanation. The four composable narrative paths in [teaser-judgment-patterns.md](references/teaser-judgment-patterns.md) help arrange those modules; they are not industry labels or mutually exclusive lead-hook categories.
 
-Preserve the user's explicit investment thesis and priority order. When no order is stated, infer the lead from `investment impact × fact strength × reader comprehension`; ask the user to choose only when genuinely different leads are equally strong. Financing completion is a stage signal, not commercial proof, unless its investor or terms constitute separately verified validation.
+Preserve the user's explicit investment thesis and priority order. When no order is stated, use the team-placement question below and rank the remaining highlights by `investment impact × fact strength × reader comprehension`. Financing completion is a stage signal, not commercial proof, unless its investor or terms constitute separately verified validation.
 
 Do not confuse evidence density with credibility. Public-facing teasers may use customer categories, deal ranges, and aggregated results where exact names, amounts, or commercial terms belong in DD. The teaser must make the next meeting feel necessary; it does not need to settle every diligence question.
 
@@ -56,11 +56,27 @@ Classify each important claim internally as `[事实]`, `[推断]`, `[目标/预
 
 Never restore an anonymized name, amount, location, customer, or institutional relationship. Preserve masks and placeholders exactly.
 
+#### Flag material gaps before generating
+
+After reviewing the supplied material, check for gaps that affect the teaser's claims or visual direction:
+
+- **Team details** — founder or key member names and roles, relevant prior responsibilities, and verifiable outcomes when the material gives only a broad team label.
+- **Market opportunity** — market size or a defensible estimate, with a year, geography, segment definition, and source. Check whether the number is historical or a forecast.
+- **Other evidence** — product stage, customer or delivery status, and financing details when they support a claim on the teaser. Check reference images when the user mentions them or the design depends on an authentic product, team, or site image.
+
+If material information is missing, send a short user-facing update titled `缺失项提醒` before generating the poster or prompt. For each gap, state what is missing, which claim or visual decision it affects, and what information would resolve it. Apply this step even when the only requested deliverable is the prompt. Then generate using the evidence already available and preserve intentional masks and placeholders. Wait for input only if the user asks to pause or the missing input is essential to the requested deliverable.
+
 ### 2. Select the investment judgment and proof
 
 Identify the project's key transition or growth inflection first, then select 3–4 of the five judgment modules. Choose one visual lead and two supporting proofs: one proves the lead judgment; the other explains durability, moat, or upside. When the evidence supports it, make the lead connect `external driver → customer demand → company-level current proof`; otherwise state the strongest static judgment without inventing motion. Describe the chosen order in one compact line using `投资判断｜关键变化｜决定性证明｜持续性机制`; do not expose private chain-of-thought.
 
-Honor an explicit user narrative order. Otherwise infer the order from the evidence and proceed; do not block the teaser waiting for a ranking. If a proposed judgment is weak, conflicting, or legally risky, downgrade or qualify it visibly and select another evidence-backed judgment. Treat employer heritage as a credential, not endorsement. Do not use another company's logo unless authorization or an official relationship is verified.
+Honor the user’s narrative order and fill any remaining priorities from the evidence. If a proposed judgment is weak, conflicting, or legally risky, downgrade or qualify it visibly and select another evidence-backed judgment. Treat employer heritage as a credential, not endorsement. Do not use another company's logo unless authorization or an official relationship is verified.
+
+#### Ask about putting the team first
+
+When the user has left the lead and team placement open, ask once before generating the poster or prompt, after any `缺失项提醒`. Ask `这张推介图要把团队放在公司信息下方的第一栏吗？` with the options `团队放第一栏` and `其他亮点放第一栏`. Treat this as an optional preference.
+
+If the user chooses team first, make the team the lead and apply the team-first layout. If the user chooses other highlights first, select the strongest supported non-team lead. If the user leaves the choice open after a reasonable opportunity to answer, proceed with the strongest supported lead.
 
 ### 3. Apply the stated or inferred visual priority
 
@@ -192,7 +208,7 @@ Add one compact team coverage line and one historical evidence strip when suppor
 
 ## Output contract
 
-Select the visual lead and supporting proofs from the evidence, respecting any explicit user priority. State the inferred priority when it materially helps the user review the teaser; ask for a decision only when competing investment judgments are genuinely close and would create materially different visual narratives. Then follow the requested artifact mode below.
+Select the visual lead and supporting proofs from the evidence, respecting any explicit user priority. State the inferred priority when it materially helps the user review the teaser. Beyond the team-placement question, ask about competing leads only when the decision would materially change the narrative and the evidence supports both equally well. Then follow the requested artifact mode below.
 
 Unless the user requests only one artifact, return:
 
@@ -200,12 +216,11 @@ Unless the user requests only one artifact, return:
 2. **One-page blueprint** — thesis, headline, section order, approximate canvas allocation, evidence containers, visual anchor, and footer.
 3. **Final on-image copy** — exact copy grouped by visual zone; retain placeholders and masks.
 4. **Image-generation prompt** — one self-contained English prompt; keep on-image copy in the audience's language and specify the requested aspect ratio.
-5. **DD gaps** — at most three missing items that could materially weaken investor belief.
 
 If the user asks for:
 
 - **review only**: diagnose and propose the blueprint without generating an image;
-- **prompt only**: output only the ready-to-use image-generation prompt;
+- **prompt only**: deliver the ready-to-use image-generation prompt as the sole artifact after the pre-generation gap update, if needed;
 - **a finished image**: first finalize the evidence and prompt, then use the image-generation capability; inspect the result and iterate for legibility, hierarchy, factual accuracy, and aspect ratio;
 - **another version**: change the visual lead, evidence order, or visual logic—not just adjectives and colors.
 
@@ -234,13 +249,13 @@ If the user asks for:
 - 上片限定词：
 - 底注：
 - DD材料：
-- 待补数据：
 ```
 
 ## Quality gate
 
 Before delivery, verify:
 
+- Were any material evidence gaps communicated to the user before generating the poster or prompt?
 - Is the visual lead either user-specified or clearly inferred from the strongest investment judgment, and do the visual priority and reading order follow it?
 - Does the prompt specify only `9:20 vertical, 1440 × 3200 px, 2K/QHD+ class` and explicitly require native high-resolution rendering?
 - Is purely skeuomorphic imagery between roughly 25–35% and never above 35% of the total canvas area?
